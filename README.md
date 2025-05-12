@@ -26,10 +26,10 @@ This document provides detailed steps to create and manage an Amazon S3 bucket w
 
 ### Using AWS CLI
 
-Run the following command to create a bucket (replace `my-unique-bucket-name` and `us-east-1` with your values):
+Run the following command to create a bucket (replace `s3-features-implementation` and `us-east-1` with your values):
 
 ```bash
-aws s3api create-bucket --bucket my-unique-bucket-name --region us-east-1 --create-bucket-configuration LocationConstraint=us-east-1
+aws s3api create-bucket --bucket s3-features-implementation --region us-east-1 --create-bucket-configuration LocationConstraint=us-east-1
 ```
 
 *Note:* For `us-east-1` region, omit the `--create-bucket-configuration` parameter.
@@ -37,7 +37,6 @@ aws s3api create-bucket --bucket my-unique-bucket-name --region us-east-1 --crea
 > **Important:** Ensure your AWS CLI is configured with appropriate credentials and region before running commands.
 
 ---
-aws s3api create-bucket --bucket my-unique-bucket-name --region us-east-1 --create-bucket-configuration LocationConstraint=us-east-1
 
 ## 2. Upload Files to the Bucket
 
@@ -49,6 +48,7 @@ aws s3api create-bucket --bucket my-unique-bucket-name --region us-east-1 --crea
 4. Click **Upload**.
 
 *Screenshot: Upload files in AWS Console*
+![Screenshot](Assets/Upload%20files%20in%20AWS%20Console.png)
 
 ---
 
