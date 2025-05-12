@@ -100,6 +100,7 @@ To allow public read access to all objects in the bucket, apply the following bu
 5. Save changes.
 
 *Screenshot: Bucket Policy editor in AWS Console*
+![Screenshot](Assets/Bucket%20Policy%20editor%20in%20AWS%20Console.png)
 
 ---
 
@@ -136,7 +137,6 @@ Example IAM policy to allow a user to list and upload objects to the bucket:
 Attach this policy to the IAM user or group as needed.
 
 ---
-}
 
 ## 4. Enable Versioning and Add Lifecycle Rule
 
@@ -151,6 +151,7 @@ Attach this policy to the IAM user or group as needed.
 5. Save changes.
 
 *Screenshot: Enable versioning in AWS Console*
+![Screenshot](Assets/Enable%20versioning%20in%20AWS%20Console.png)
 
 #### AWS CLI
 
@@ -218,6 +219,9 @@ Upload your `index.html` file to the bucket (see upload steps above).
 7. Save changes.
 
 *Screenshot: Static website hosting settings*
+![Screenshot](Assets/Static%20website%20hosting%20settings.png)
+
+![Screenshot](Assets/Static%20website%20hosting.png)
 
 > **Important:** Static website hosting does not support HTTPS. Use CloudFront or other CDN for secure HTTPS hosting.
 
@@ -272,7 +276,6 @@ aws s3api put-bucket-replication --bucket source-bucket-name --replication-confi
 
 ---
 aws s3api put-bucket-replication --bucket source-bucket-name --replication-configuration file://replication.json
-}
 
 ## 7. Enable Access Logging
 
@@ -286,6 +289,7 @@ aws s3api put-bucket-replication --bucket source-bucket-name --replication-confi
 6. Save changes.
 
 *Screenshot: Server access logging settings*
+![Screenshot](Assets/Server%20access%20logging%20settings.png)
 
 > **Tip:** Use a separate bucket for access logs to avoid recursive logging.
 
@@ -311,6 +315,7 @@ aws s3api put-bucket-logging --bucket source-bucket-name --bucket-logging-status
 5. View logs and events related to S3 bucket activity.
 
 *Screenshot: CloudTrail event history*
+![Screenshot](Assets/CloudTrail%20event%20history.png)
 
 ---
 
@@ -322,6 +327,7 @@ aws s3api put-bucket-logging --bucket source-bucket-name --bucket-logging-status
 4. View metrics such as NumberOfObjects, BucketSizeBytes, AllRequests, etc.
 
 *Screenshot: CloudWatch S3 metrics*
+![Screenshot](Assets/CloudWatch%20S3%20metrics.png)
 
 > **Note:** Some S3 metrics are updated once per day and may have a delay.
 
@@ -332,5 +338,3 @@ aws s3api put-bucket-logging --bucket source-bucket-name --bucket-logging-status
 This documentation covered creating an S3 bucket, uploading files, setting permissions, enabling versioning and lifecycle rules, hosting a static website, configuring cross-region replication, enabling access logging, and monitoring via CloudTrail and CloudWatch. Use the AWS Console or CLI commands as per your preference.
 
 ---
-
-*Note:* Replace all placeholder bucket names, ARNs, and file names with your actual values. Add screenshots at indicated places for better clarity.
