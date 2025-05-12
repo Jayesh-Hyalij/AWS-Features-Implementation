@@ -235,6 +235,8 @@ aws s3 website s3://my-unique-bucket-name/ --index-document index.html
 - Both source and destination buckets must have versioning enabled.
 - The destination bucket must have a bucket policy allowing replication.
 
+> **Note:** Cross-Region Replication may incur additional costs and requires proper IAM roles and permissions.
+
 ### Steps
 
 1. Enable versioning on both buckets (see step 4).
@@ -268,6 +270,8 @@ aws s3api put-bucket-replication --bucket source-bucket-name --replication-confi
 *Note:* Replace ARNs and bucket names accordingly.
 
 ---
+aws s3api put-bucket-replication --bucket source-bucket-name --replication-configuration file://replication.json
+}
 
 ## 7. Enable Access Logging
 
@@ -281,6 +285,8 @@ aws s3api put-bucket-replication --bucket source-bucket-name --replication-confi
 6. Save changes.
 
 *Screenshot: Server access logging settings*
+
+> **Tip:** Use a separate bucket for access logs to avoid recursive logging.
 
 ### AWS CLI
 
