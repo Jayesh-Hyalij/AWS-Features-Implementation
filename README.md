@@ -20,7 +20,7 @@ This document provides detailed steps to create and manage an Amazon S3 bucket w
 7. Click **Create bucket**.
 
 *Screenshot: AWS Console Create Bucket page*
-![Screenshot](Assets/AWS%20Console%20Create%20Bucket%20page.png.png)
+![Screenshot](Assets/AWS%20Console%20Create%20Bucket%20page.png)
 
 ---
 
